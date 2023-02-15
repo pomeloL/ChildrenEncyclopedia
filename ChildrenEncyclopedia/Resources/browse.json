@@ -1,0 +1,41 @@
+{
+    "data": [{
+        "name": "地理知识",
+        "list": [{
+            "name": "国旗",
+            "dis": "了解世界各国国旗",
+            "imageName": "cn"
+        },{
+            "name": "板块构造",
+            "dis": "地球六大板块",
+            "imageName": "cn"
+        },{
+            "name": "天气",
+            "dis": "各类天气名称",
+            "imageName": "cn"
+        },{
+            "name": "国旗",
+            "dis": "了解世界各国国旗",
+            "imageName": "cn"
+        }]
+    },{
+        "name": "工业制造",
+        "list": [{
+            "name": "车标",
+            "dis": "汽车车标大全",
+            "imageName": "cn"
+        },{
+            "name": "国旗",
+            "dis": "了解世界各国国旗了解世界各国国旗了解世界各国国旗",
+            "imageName": "cn"
+        },{
+            "name": "国旗",
+            "dis": "了解世界各国国旗了解世界各国国旗了解世界各国国旗",
+            "imageName": "cn"
+        },{
+            "name": "国旗",
+            "dis": "了解世界各国国旗了解世界各国国旗了解世界各国国旗",
+            "imageName": "cn"
+        }]
+    }]
+}
