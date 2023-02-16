@@ -11,6 +11,7 @@ struct BrowseItemModel: Codable, Hashable {
     var name: String
     var dis: String
     var imageName: String
+    var page: String
 }
 
 struct BrowseModel: Codable, Hashable {
@@ -41,7 +42,6 @@ class BrowseViewModel: ObservableObject {
                 let fileData = try JSONDecoder().decode(BrowseListModel.self, from: data)
                 self.browseList = fileData.data
             }catch {
-                print("error1")
                 print(String(describing: error))
             }
         }catch {

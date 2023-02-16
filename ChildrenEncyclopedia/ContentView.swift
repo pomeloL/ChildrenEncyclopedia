@@ -28,10 +28,16 @@ struct ContentView: View {
                 .tag(1)
             Text("Tab 3")
                 .tabItem {
+                    Image(systemName: "externaldrive.badge.person.crop")
+                    Text("账户")
+                }
+                .tag(2)
+            Text("Tab 4")
+                .tabItem {
                     Image(systemName: "magnifyingglass")
                     Text("搜索")
                 }
-                .tag(2)
+                .tag(3)
         }
         .accentColor(Color.pink)
     }

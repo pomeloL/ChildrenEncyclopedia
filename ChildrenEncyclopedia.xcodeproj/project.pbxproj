@@ -18,6 +18,7 @@
 		FB11EC8F299CB77D00E69E1E /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB11EC8E299CB77D00E69E1E /* Country.swift */; };
 		FB11EC97299CD0C200E69E1E /* browse.json in Resources */ = {isa = PBXBuildFile; fileRef = FB11EC96299CD0C200E69E1E /* browse.json */; };
 		FB11EC99299CD20000E69E1E /* Browse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB11EC98299CD20000E69E1E /* Browse.swift */; };
+		FB11EC9F299E146300E69E1E /* CountryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB11EC9E299E146300E69E1E /* CountryList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,12 +29,13 @@
 		FB11EC76299C8C4800E69E1E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FB11EC78299C8C4800E69E1E /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		FB11EC7B299C8C4800E69E1E /* ChildrenEncyclopedia.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ChildrenEncyclopedia.xcdatamodel; sourceTree = "<group>"; };
-		FB11EC7D299C8C4800E69E1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB11EC84299CA3AD00E69E1E /* BrowseHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseHomeView.swift; sourceTree = "<group>"; };
 		FB11EC89299CB2A000E69E1E /* country.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = country.json; sourceTree = "<group>"; };
 		FB11EC8E299CB77D00E69E1E /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		FB11EC96299CD0C200E69E1E /* browse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = browse.json; sourceTree = "<group>"; };
 		FB11EC98299CD20000E69E1E /* Browse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Browse.swift; sourceTree = "<group>"; };
+		FB11EC9E299E146300E69E1E /* CountryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryList.swift; sourceTree = "<group>"; };
+		FB11ECA0299E350100E69E1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = ChildrenEncyclopedia/Info.plist; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,8 +75,8 @@
 				FB11EC88299CB08E00E69E1E /* Resources */,
 				FB11EC78299C8C4800E69E1E /* Persistence.swift */,
 				FB11EC8B299CB3CE00E69E1E /* Model */,
-				FB11EC7D299C8C4800E69E1E /* Info.plist */,
 				FB11EC7A299C8C4800E69E1E /* ChildrenEncyclopedia.xcdatamodeld */,
+				FB11ECA0299E350100E69E1E /* Info.plist */,
 				FB11EC75299C8C4800E69E1E /* Preview Content */,
 			);
 			path = ChildrenEncyclopedia;
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				FB11EC84299CA3AD00E69E1E /* BrowseHomeView.swift */,
+				FB11EC9E299E146300E69E1E /* CountryList.swift */,
 			);
 			path = Browse;
 			sourceTree = "<group>";
@@ -151,10 +154,11 @@
 			};
 			buildConfigurationList = FB11EC67299C8C4700E69E1E /* Build configuration list for PBXProject "ChildrenEncyclopedia" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = cn;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				"zh-Hans",
 				Base,
 			);
 			mainGroup = FB11EC63299C8C4700E69E1E;
@@ -190,6 +194,7 @@
 				FB11EC99299CD20000E69E1E /* Browse.swift in Sources */,
 				FB11EC79299C8C4800E69E1E /* Persistence.swift in Sources */,
 				FB11EC72299C8C4700E69E1E /* ContentView.swift in Sources */,
+				FB11EC9F299E146300E69E1E /* CountryList.swift in Sources */,
 				FB11EC7C299C8C4800E69E1E /* ChildrenEncyclopedia.xcdatamodeld in Sources */,
 				FB11EC8F299CB77D00E69E1E /* Country.swift in Sources */,
 				FB11EC70299C8C4700E69E1E /* ChildrenEncyclopediaApp.swift in Sources */,
@@ -249,7 +254,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -303,7 +308,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

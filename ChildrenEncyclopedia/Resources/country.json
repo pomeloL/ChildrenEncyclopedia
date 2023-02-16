@@ -3,6 +3,15 @@
         "name": "中国",
         "nameEN": "China",
         "dName": "cn",
-        "imageName": "cn"
+        "imageName": "cn",
+        "imageUrl":"",
+        "oshima":"亚洲"
+    },{
+        "name": "美国",
+        "nameEN": "America",
+        "dName": "um",
+        "imageName": "um",
+        "imageUrl":"",
+        "oshima":"北美"
     }]
 }

@@ -12,6 +12,8 @@ struct CountryModel: Codable, Hashable {
     var nameEN: String
     var dName: String
     var imageName: String
+    var imageUrl: String
+    var oshima: String
 }
 
 struct CountryListModel: Codable, Hashable {
@@ -37,7 +39,6 @@ class CountryViewModel: ObservableObject {
                 let fileData = try JSONDecoder().decode(CountryListModel.self, from: data)
                 self.countryList = fileData.country
             }catch {
-               
                 print(String(describing: error))
             }
         }catch {
