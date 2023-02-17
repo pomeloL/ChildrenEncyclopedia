@@ -5,22 +5,26 @@
             "name": "国旗",
             "dis": "了解各国（地区）国旗",
             "imageName": "",
-            "page":"CountryList"
+            "page":"CountryList",
+            "color":"429272"
         },{
             "name": "板块",
             "dis": "地球六大板块",
             "imageName": "",
-            "page":""
+            "page":"",
+            "color":"781e25"
         },{
             "name": "天气",
             "dis": "各类天气名称",
             "imageName": "",
-            "page":""
+            "page":"",
+            "color":"1c1e1d"
         },{
             "name": "国旗",
             "dis": "了解世界各国国旗",
             "imageName": "",
-            "page":""
+            "page":"",
+            "color":"cae0c7"
         }]
     },{
         "name": "工业制造",
@@ -28,12 +32,14 @@
             "name": "车标",
             "dis": "汽车车标大全",
             "imageName": "",
-            "page":""
+            "page":"",
+            "color":"3d3b47"
         },{
             "name": "国旗",
             "dis": "了解世界各国国旗了解世界各国国旗了解世界各国国旗",
             "imageName": "",
-            "page":""
+            "page":"",
+            "color":"6990bc"
         }]
     },{
         "name": "自然界",
@@ -41,12 +47,14 @@
             "name": "动物",
             "dis": "各类常见动物",
             "imageName": "",
-            "page":""
+            "page":"",
+            "color":"1c1e1d"
         },{
             "name": "水果",
             "dis": "各类常见水果",
             "imageName": "",
-            "page":""
+            "page":"",
+            "color":"3c9689"
         }]
     }]
 }

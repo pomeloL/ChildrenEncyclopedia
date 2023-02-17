@@ -12,6 +12,7 @@ struct BrowseItemModel: Codable, Hashable {
     var dis: String
     var imageName: String
     var page: String
+    var color: String
 }
 
 struct BrowseModel: Codable, Hashable {

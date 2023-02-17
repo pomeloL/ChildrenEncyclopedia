@@ -19,6 +19,11 @@
 		FB11EC97299CD0C200E69E1E /* browse.json in Resources */ = {isa = PBXBuildFile; fileRef = FB11EC96299CD0C200E69E1E /* browse.json */; };
 		FB11EC99299CD20000E69E1E /* Browse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB11EC98299CD20000E69E1E /* Browse.swift */; };
 		FB11EC9F299E146300E69E1E /* CountryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB11EC9E299E146300E69E1E /* CountryList.swift */; };
+		FB11ECA5299F438F00E69E1E /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB11ECA4299F438F00E69E1E /* WebView.swift */; };
+		FB11ECA7299F445E00E69E1E /* WebViewSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB11ECA6299F445E00E69E1E /* WebViewSheet.swift */; };
+		FB11ECA9299F4E2600E69E1E /* CountrySheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB11ECA8299F4E2600E69E1E /* CountrySheet.swift */; };
+		FB11ECAB299F570300E69E1E /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB11ECAA299F570300E69E1E /* ItemView.swift */; };
+		FB11ECAD299F578300E69E1E /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB11ECAC299F578300E69E1E /* TopView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +41,11 @@
 		FB11EC98299CD20000E69E1E /* Browse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Browse.swift; sourceTree = "<group>"; };
 		FB11EC9E299E146300E69E1E /* CountryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryList.swift; sourceTree = "<group>"; };
 		FB11ECA0299E350100E69E1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = ChildrenEncyclopedia/Info.plist; sourceTree = SOURCE_ROOT; };
+		FB11ECA4299F438F00E69E1E /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		FB11ECA6299F445E00E69E1E /* WebViewSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewSheet.swift; sourceTree = "<group>"; };
+		FB11ECA8299F4E2600E69E1E /* CountrySheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountrySheet.swift; sourceTree = "<group>"; };
+		FB11ECAA299F570300E69E1E /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
+		FB11ECAC299F578300E69E1E /* TopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +80,8 @@
 			children = (
 				FB11EC6F299C8C4700E69E1E /* ChildrenEncyclopediaApp.swift */,
 				FB11EC71299C8C4700E69E1E /* ContentView.swift */,
+				FB11ECA4299F438F00E69E1E /* WebView.swift */,
+				FB11ECA6299F445E00E69E1E /* WebViewSheet.swift */,
 				FB11EC83299CA37E00E69E1E /* Browse */,
 				FB11EC73299C8C4800E69E1E /* Assets.xcassets */,
 				FB11EC88299CB08E00E69E1E /* Resources */,
@@ -94,6 +106,9 @@
 			isa = PBXGroup;
 			children = (
 				FB11EC84299CA3AD00E69E1E /* BrowseHomeView.swift */,
+				FB11ECAC299F578300E69E1E /* TopView.swift */,
+				FB11ECAA299F570300E69E1E /* ItemView.swift */,
+				FB11ECA8299F4E2600E69E1E /* CountrySheet.swift */,
 				FB11EC9E299E146300E69E1E /* CountryList.swift */,
 			);
 			path = Browse;
@@ -157,6 +172,7 @@
 			developmentRegion = cn;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				cn,
 				en,
 				"zh-Hans",
 				Base,
@@ -190,12 +206,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB11ECAD299F578300E69E1E /* TopView.swift in Sources */,
 				FB11EC85299CA3AD00E69E1E /* BrowseHomeView.swift in Sources */,
 				FB11EC99299CD20000E69E1E /* Browse.swift in Sources */,
 				FB11EC79299C8C4800E69E1E /* Persistence.swift in Sources */,
+				FB11ECA9299F4E2600E69E1E /* CountrySheet.swift in Sources */,
 				FB11EC72299C8C4700E69E1E /* ContentView.swift in Sources */,
 				FB11EC9F299E146300E69E1E /* CountryList.swift in Sources */,
 				FB11EC7C299C8C4800E69E1E /* ChildrenEncyclopedia.xcdatamodeld in Sources */,
+				FB11ECAB299F570300E69E1E /* ItemView.swift in Sources */,
+				FB11ECA5299F438F00E69E1E /* WebView.swift in Sources */,
+				FB11ECA7299F445E00E69E1E /* WebViewSheet.swift in Sources */,
 				FB11EC8F299CB77D00E69E1E /* Country.swift in Sources */,
 				FB11EC70299C8C4700E69E1E /* ChildrenEncyclopediaApp.swift in Sources */,
 			);

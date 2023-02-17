@@ -14,6 +14,7 @@ struct CountryModel: Codable, Hashable {
     var imageName: String
     var imageUrl: String
     var oshima: String
+    var capital: String
 }
 
 struct CountryListModel: Codable, Hashable {
