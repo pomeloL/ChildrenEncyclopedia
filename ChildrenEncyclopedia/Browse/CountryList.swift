@@ -7,6 +7,7 @@
 
 import SwiftUI
 import AVFoundation
+import SDWebImageSwiftUI
 
 struct CountryList: View {
     
@@ -47,6 +48,8 @@ struct CountryList_Previews: PreviewProvider {
 struct CountryItem: View {
     @State var country:CountryModel
     let speechSynthesizer = AVSpeechSynthesizer()
+    @State private var showWebView = false
+    
     var body: some View {
         VStack(alignment: .leading) {
             Button {
@@ -59,13 +62,16 @@ struct CountryItem: View {
                 speechSynthesizer.speak(utterance2)
                 
             } label: {
-                Image(country.imageName)
+                let resBundlePath = Bundle.main.path(forResource: "flag", ofType: "bundle")
+                let resBundle = Bundle(path: resBundlePath!)
+                let url = resBundle!.url(forResource: country.imageName, withExtension: "png")
+                AnimatedImage(url: url)
                     .resizable()
                     .scaledToFit()
-                    .cornerRadius(3)
             }
+            
             Button {
-                
+                showWebView.toggle()
             } label: {
                 VStack(alignment: .leading) {
                     Text(country.name)
@@ -77,10 +83,10 @@ struct CountryItem: View {
                         .font(.subheadline)
                 }
             }
-            
-            
+            .sheet(isPresented: $showWebView) {
+                WebViewSheet(url: country.url, title: country.name)
+            }
         }
-//        .padding([.top],10)
         
     }
 }
@@ -94,7 +100,8 @@ extension CountryList {
                 }
             }
             .padding(.horizontal)
-            .padding([.top],10)
+            .padding([.top],5)
+            .padding([.bottom],30)
         }
         .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always), prompt: "按国家（地区）搜索，例：中国")
         .navigationBarTitle("国旗", displayMode: .inline)

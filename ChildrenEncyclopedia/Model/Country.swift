@@ -10,11 +10,8 @@ import Foundation
 struct CountryModel: Codable, Hashable {
     var name: String
     var nameEN: String
-    var dName: String
     var imageName: String
-    var imageUrl: String
-    var oshima: String
-    var capital: String
+    var url: String
 }
 
 struct CountryListModel: Codable, Hashable {
@@ -25,7 +22,7 @@ class CountryViewModel: ObservableObject {
     @Published var countryList: [CountryModel] = []
     
     init(){
-        initData()
+        self.initData()
     }
    
     private func initData(){
