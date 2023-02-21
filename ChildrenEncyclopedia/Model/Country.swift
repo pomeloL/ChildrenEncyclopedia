@@ -15,11 +15,12 @@ struct CountryModel: Codable, Hashable {
 }
 
 struct CountryListModel: Codable, Hashable {
-    var country: [CountryModel]
+    var countrys: [CountryModel]
 }
 
 class CountryViewModel: ObservableObject {
     @Published var countryList: [CountryModel] = []
+    @Published var urlList: [URL] = []
     
     init(){
         self.initData()
@@ -35,7 +36,17 @@ class CountryViewModel: ObservableObject {
             
             do {
                 let fileData = try JSONDecoder().decode(CountryListModel.self, from: data)
-                self.countryList = fileData.country
+                self.countryList = fileData.countrys
+                for country in  fileData.countrys {
+                    let resBundlePath = Bundle.main.path(forResource: "flags", ofType: "bundle")
+                    let resBundle = Bundle(path: resBundlePath!)
+                    let url = resBundle!.url(forResource: country.imageName, withExtension: "png")
+                    if let urlMy = url {
+                        self.urlList.append(urlMy)
+                    }else{
+                        self.urlList.append( URL(string: "https://picsum.photos/200")!)
+                    }
+                }
             }catch {
                 print(String(describing: error))
             }

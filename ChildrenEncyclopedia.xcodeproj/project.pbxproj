@@ -24,8 +24,8 @@
 		FB11ECA9299F4E2600E69E1E /* CountrySheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB11ECA8299F4E2600E69E1E /* CountrySheet.swift */; };
 		FB11ECAB299F570300E69E1E /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB11ECAA299F570300E69E1E /* ItemView.swift */; };
 		FB11ECAD299F578300E69E1E /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB11ECAC299F578300E69E1E /* TopView.swift */; };
-		FB11ECB329A3615100E69E1E /* flag.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FB11ECB229A3615100E69E1E /* flag.bundle */; };
 		FB11ECB629A3797700E69E1E /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = FB11ECB529A3797700E69E1E /* SDWebImageSwiftUI */; };
+		FB11ECC029A4A0D400E69E1E /* flags.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FB11ECBF29A4A0D400E69E1E /* flags.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,7 +48,7 @@
 		FB11ECA8299F4E2600E69E1E /* CountrySheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountrySheet.swift; sourceTree = "<group>"; };
 		FB11ECAA299F570300E69E1E /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
 		FB11ECAC299F578300E69E1E /* TopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
-		FB11ECB229A3615100E69E1E /* flag.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = flag.bundle; path = ../../../../../../Downloads/flag.bundle; sourceTree = "<group>"; };
+		FB11ECBF29A4A0D400E69E1E /* flags.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = flags.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,7 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				FB11EC89299CB2A000E69E1E /* country.json */,
-				FB11ECB229A3615100E69E1E /* flag.bundle */,
+				FB11ECBF29A4A0D400E69E1E /* flags.bundle */,
 				FB11EC96299CD0C200E69E1E /* browse.json */,
 			);
 			path = Resources;
@@ -205,9 +205,9 @@
 			files = (
 				FB11EC77299C8C4800E69E1E /* Preview Assets.xcassets in Resources */,
 				FB11EC97299CD0C200E69E1E /* browse.json in Resources */,
+				FB11ECC029A4A0D400E69E1E /* flags.bundle in Resources */,
 				FB11EC74299C8C4800E69E1E /* Assets.xcassets in Resources */,
 				FB11EC8A299CB2A000E69E1E /* country.json in Resources */,
-				FB11ECB329A3615100E69E1E /* flag.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

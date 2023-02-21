@@ -47,6 +47,7 @@ struct CountryList_Previews: PreviewProvider {
 
 struct CountryItem: View {
     @State var country:CountryModel
+    @State var url:URL
     let speechSynthesizer = AVSpeechSynthesizer()
     @State private var showWebView = false
     
@@ -62,9 +63,6 @@ struct CountryItem: View {
                 speechSynthesizer.speak(utterance2)
                 
             } label: {
-                let resBundlePath = Bundle.main.path(forResource: "flag", ofType: "bundle")
-                let resBundle = Bundle(path: resBundlePath!)
-                let url = resBundle!.url(forResource: country.imageName, withExtension: "png")
                 AnimatedImage(url: url)
                     .resizable()
                     .scaledToFit()
@@ -76,16 +74,19 @@ struct CountryItem: View {
                 VStack(alignment: .leading) {
                     Text(country.name)
                         .foregroundColor(.secondary)
-                    //                        .underline()
+//                        .underline()
                     Text(country.nameEN)
                         .foregroundColor(.secondary)
                         .lineLimit(1)
                         .font(.subheadline)
                 }
+                .padding([.top],-15)
+                .padding([.bottom],-5)
             }
             .sheet(isPresented: $showWebView) {
                 WebViewSheet(url: country.url, title: country.name)
             }
+            
         }
         
     }
@@ -95,8 +96,8 @@ extension CountryList {
     var RootView: some View {
         ScrollView {
             LazyVGrid(columns:columns ) {
-                ForEach(filteredCountryModels, id: \.self) { country in
-                    CountryItem(country:country)
+                ForEach(0..<filteredCountryModels.count, id: \.self) { i in
+                    CountryItem(country:filteredCountryModels[i],url: countryViewModel.urlList[i])
                 }
             }
             .padding(.horizontal)
