@@ -11,23 +11,30 @@ struct BrowseHomeView: View {
     @StateObject var browseViewModel:BrowseViewModel = BrowseViewModel()
     
     var body: some View {
-        NavigationView {
-            VStack{
-                ScrollView(.vertical, showsIndicators: true, content: {
-                    LazyVStack {
-                        TopView()
-                        
-                        ForEach(browseViewModel.browseList, id:\.self) { item in
-                            ItemView(browseModel: item)
-                        }
-                    }
-                })
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            NavigationView {
+                contentView
             }
-            .frame(maxHeight: .infinity)
-            .frame(maxWidth: .infinity)
-            .navigationTitle("浏览")
-            
+        } else {
+            contentView
         }
+    }
+    
+    var contentView: some View {
+        VStack{
+            ScrollView(.vertical, showsIndicators: true, content: {
+                LazyVStack {
+                    TopView()
+                    
+                    ForEach(browseViewModel.browseList, id:\.self) { item in
+                        ItemView(browseModel: item)
+                    }
+                }
+            })
+        }
+        .frame(maxHeight: .infinity)
+        .frame(maxWidth: .infinity)
+        .navigationTitle("浏览")
     }
 }
 

@@ -20,7 +20,9 @@ struct CountryList: View {
         GridItem(.flexible(), spacing: 10, alignment: .bottom),
         GridItem(.flexible(), spacing: 10, alignment: .bottom)
     ]
-    
+    @State  var showWebView: Bool = false
+    @State  var sheetUrl: String = ""
+    @State  var sheetName: String = ""
     
     var body: some View {
         ZStack {
@@ -47,9 +49,11 @@ struct CountryList_Previews: PreviewProvider {
 
 struct CountryItem: View {
     @State var country:CountryModel
-    @State var url:URL
+    @State var url: URL
     let speechSynthesizer = AVSpeechSynthesizer()
-    @State private var showWebView = false
+    @Binding var showWebView: Bool
+    @Binding var sheetUrl: String
+    @Binding var sheetName: String
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -69,12 +73,14 @@ struct CountryItem: View {
             }
             
             Button {
+                sheetUrl = country.url
+                sheetName = country.name
                 showWebView.toggle()
             } label: {
                 VStack(alignment: .leading) {
                     Text(country.name)
                         .foregroundColor(.secondary)
-//                        .underline()
+                    //                        .underline()
                     Text(country.nameEN)
                         .foregroundColor(.secondary)
                         .lineLimit(1)
@@ -83,9 +89,7 @@ struct CountryItem: View {
                 .padding([.top],-15)
                 .padding([.bottom],-5)
             }
-            .sheet(isPresented: $showWebView) {
-                WebViewSheet(url: country.url, title: country.name)
-            }
+            
             
         }
         
@@ -95,14 +99,21 @@ struct CountryItem: View {
 extension CountryList {
     var RootView: some View {
         ScrollView {
+            
             LazyVGrid(columns:columns ) {
-                ForEach(0..<filteredCountryModels.count, id: \.self) { i in
-                    CountryItem(country:filteredCountryModels[i],url: countryViewModel.urlList[i])
+                ForEach(Array(filteredCountryModels.enumerated()), id: \.1.imageName) { index, country in
+                    CountryItem(country:country,url: countryViewModel.urlList[index], showWebView: $showWebView, sheetUrl: $sheetUrl, sheetName: $sheetName)
                 }
+            }
+            .sheet(isPresented: $showWebView) {
+                WebViewSheet(url: sheetUrl, title: sheetName)
             }
             .padding(.horizontal)
             .padding([.top],5)
             .padding([.bottom],30)
+            
+            Text(sheetName)
+                .foregroundColor(Color("CountryBg"))
         }
         .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always), prompt: "按国家（地区）搜索，例：中国")
         .navigationBarTitle("国旗", displayMode: .inline)

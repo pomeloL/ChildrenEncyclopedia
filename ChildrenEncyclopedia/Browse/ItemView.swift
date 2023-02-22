@@ -55,6 +55,8 @@ extension ItemView {
 
 struct ImageItemView: View {
     @State var browseItemModel: BrowseItemModel
+    @State var padWidth: CGFloat = 200
+    @State var phoneWidth: CGFloat = UIScreen.main.bounds.width/2.25
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -82,7 +84,7 @@ struct ImageItemView: View {
                 .lineLimit(1)
                 .truncationMode(.tail)
                 .font(.subheadline)
-                .frame(width: UIScreen.main.bounds.width/2.25, alignment: .leading)
+                .frame(width:UIDevice.current.userInterfaceIdiom == .phone ? phoneWidth : padWidth, alignment: .leading)
         }
         
     }
@@ -91,7 +93,7 @@ struct ImageItemView: View {
         Image(browseItemModel.imageName)
             .resizable()
             .scaledToFill()
-            .frame(width: UIScreen.main.bounds.width/2.25, height: UIScreen.main.bounds.width/2.25)
+            .frame(width: UIDevice.current.userInterfaceIdiom == .phone ? phoneWidth : padWidth, height:UIDevice.current.userInterfaceIdiom == .phone ? phoneWidth : padWidth)
             .cornerRadius(10)
     }
     
@@ -118,7 +120,7 @@ struct ImageItemView: View {
                     }
             })
         
-            .frame(width: UIScreen.main.bounds.width/2.25, height: UIScreen.main.bounds.width/2.25)
+            .frame(width: UIDevice.current.userInterfaceIdiom == .phone ? phoneWidth : padWidth, height: UIDevice.current.userInterfaceIdiom == .phone ? phoneWidth : padWidth)
     }
     
 }
